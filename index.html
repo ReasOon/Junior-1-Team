@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>하...</title>
+</head>
+<body>
+  <form action="#">
+    <fieldset>
+      <legend>로그인</legend>
+      <button type="button">
+      Log in with Google
+      </button>
+    </fieldset>
+    <p>or</p>
+    <fieldset>
+      <legend>일반 로그인</legend>
+      <label for="username">
+        <input type="text" id="username" placeholder="Username">
+      </label>
+      <label for="password">
+        <input type="password" id="password" name="password" placeholder="Password">
+      </label>
+      <button type="submit">
+      LOGIN
+      </button>
+    </fieldset>
+    <a href="#">Forget your password?</a>
+  </form>
+  <script>
+    document.forms[0].addEventListener("submit", function(e){
+      const idEl = document.forms[0].username;
+      const idValue = idEl.value.trim();
+      const pwEl = document.forms[0].password;
+      const pwValue = pwEl.value.trim();
+
+      if(idValue ===""){
+        alert("아이디를 입력해 주세요.");
+        idEl.focus();
+        return;
+      }
+
+      if(idValue.index0f("@") === -1){
+        alert("아이디는 이메일 형식으로 입력해주세요.");
+        idEl.focus();
+        return;
+      }
+
+      if(pwValue === ""){
+        alert("비밀번호를 입력해 주세요.");
+        pwEl.focus();
+      }
+
+      this.submit();
+    });
+  </script>
+</body>
+</html>
