@@ -1,6 +1,0 @@
-{
-    "compierOptions":{
-        "baseUrl":"scr"
-    },
-    "include":["src"]
-}
