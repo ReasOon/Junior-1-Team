@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { authService, auth } from '../fbase';
+import {NavLink} from "react-router-dom";
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -8,6 +9,10 @@ const Login = () => {
     const [newAccount, setNewAccount] = useState(true);
     const [error, setError] = useState('');
     const [userData, setUserData] = useState(null);
+
+    const handleOpenPopup = () => {
+      alert("로그인 후 사용해주세요!");
+    }
 
     const toggleAccount = () => setNewAccount((prev) => !prev)
     const onChange = (e) => {
@@ -158,16 +163,19 @@ const Login = () => {
             style = {{
               width:"30%",
               flexDirection:"column",
-            }}>
+            }}
+            
+          >
           <div
             style={{
               width: "100%",
               height: "50vh",
               padding: "1.5rem",
-              backgroundColor: "black",
-              overflow:"scroll"
             }}
-          ></div>
+            onClick={handleOpenPopup}
+          >
+            <img ClassName="testImg" alt="test" src="img/test.png"/>
+          </div>
           <div
             style={{
               width: "100%",
@@ -180,6 +188,6 @@ const Login = () => {
           </div>
         </div>
       );      
-}
+  }
 
 export default Login

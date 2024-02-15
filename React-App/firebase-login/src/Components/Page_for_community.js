@@ -1,7 +1,7 @@
 import './Page_for_community.css';
 import { useState } from 'react';
 
-function App() {
+function Page_for_community() {
   const [backcolor,setBackcolor]=useState("");
   
   const onClick =(color)=>{
