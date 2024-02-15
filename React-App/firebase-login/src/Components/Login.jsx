@@ -58,14 +58,37 @@ const Login = () => {
                 backgroundColor: "white"
               }}
             >
-              <span onClick={toggleAccount}>
+              <a
+              style = {{
+                fontSize:"40px",
+                color:"red",
+              }}
+              >
+               No-Smoking
+              </a>
+              <br /> <br />
+              <span 
+                style = {{
+                  fontSize: "20px",
+                }}
+                onClick={toggleAccount}>
                 {newAccount ? "create Account" : "Sign in"}
               </span>
               <a>(클릭 시 회원가입, 로그인으로 바뀜)</a>
-              <form 
-                onSubmit={onSubmit}
-              >
+              <form onSubmit={onSubmit}>
                 <input
+                  style = {{
+                    width: "500px",
+                    height: "45px",
+                    fontSize: "13px",
+                    border: "0",
+                    borderRadius: "15px",
+                    outline: "none",
+                    paddingLeft: "10px",
+                    backgroundColor:"lightgrey",
+                    marginTop:"8px",
+                    marginBottom:"15px"
+                  }}
                   name="email"
                   type="text"
                   placeholder="Email"
@@ -73,20 +96,62 @@ const Login = () => {
                   value={email}
                   onChange={onChange}
                 />
+                <br />
                 <input
+                  style = {{
+                    width: "500px",
+                    height: "45px",
+                    fontSize: "13px",
+                    border: "0",
+                    borderRadius: "15px",
+                    outline: "none",
+                    paddingLeft: "10px",
+                    backgroundColor:"lightgrey",
+                    marginBottom:"25px"
+                  }}
                   type="password"
                   placeholder="Password"
                   required
                   value={password}
                   onChange={onChange}
                 />
+                <br />
                 <input
+                  style = {{
+                    width: "150px",
+                    height: "40px",
+                    fontSize: "15px",
+                    border: "0",
+                    borderRadius: "15px",
+                    outline: "none",
+                    paddingLeft: "10px",
+                    backgroundColor:"#d94844"
+                  }}
                   type="submit"
                   value={newAccount ? "create Account" : "Sign in"}
                 />
               </form>
-              <h3>Social Login</h3>
-              <button onClick={handleGoogleLogin}>Login With Google</button>
+              <h4
+                style = {{
+                  marginTop:"35px"
+                }}
+              >
+               or
+              </h4>
+              <button
+                style = {{
+                  width: "200px",
+                  height: "40px",
+                  fontSize: "13px",
+                  border: "0",
+                  borderRadius: "15px",
+                  outline: "none",
+                  paddingLeft: "10px",
+                  backgroundColor:"beige"
+                }}
+                onClick={handleGoogleLogin}
+              >
+                Login With Google</button>
             </div>
           </div>
           <div
