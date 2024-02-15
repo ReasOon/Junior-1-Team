@@ -66,7 +66,8 @@ const Login = () => {
               <a
               style = {{
                 fontSize:"40px",
-                color:"red",
+                fontWeight:"bold",
+                color:"red"
               }}
               >
                No-Smoking
@@ -163,28 +164,18 @@ const Login = () => {
             style = {{
               width:"30%",
               flexDirection:"column",
-            }}
-            
+            }} 
           >
-          <div
-            style={{
-              width: "100%",
-              height: "50vh",
-              padding: "1.5rem",
-            }}
-            onClick={handleOpenPopup}
+            <div
+              style={{
+               width: "100%",
+                height: "50vh",
+                padding: "1.5rem",
+              }}
+              onClick={handleOpenPopup}
           >
-            <img ClassName="testImg" alt="test" src="img/test.png"/>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              height: "50vh",
-              padding: "1.5rem",
-              backgroundColor: "pink",
-              
-            }}
-          ></div>
+            <img ClassName="comunityImg" alt="community" src="img/community.png"/>
+            </ div>
           </div>
         </div>
       );      
