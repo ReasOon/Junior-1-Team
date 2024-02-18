@@ -20,7 +20,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./Components/Login";
-import mypage from "./Components/mypage";
+import mypage from "./Components/Mypage";
 
 export default function App() {
   return (
