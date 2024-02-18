@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { authService, auth } from '../fbase';
-import {NavLink} from "react-router-dom";
 
-const Login = () => {
+function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [newAccount, setNewAccount] = useState(true);
     const [error, setError] = useState('');
     const [userData, setUserData] = useState(null);
-
+    
     const handleOpenPopup = () => {
       alert("로그인 후 사용해주세요!");
     }
@@ -73,13 +72,14 @@ const Login = () => {
                No-Smoking
               </a>
               <br /> <br />
-              <span 
-                style = {{
-                  fontSize: "20px",
-                }}
-                onClick={toggleAccount}>
-                {newAccount ? "create Account" : "Sign in"}
-              </span>
+                <span 
+                  style = {{
+                    fontSize: "20px",
+                 }}
+                  onClick={toggleAccount}>
+                  {newAccount ? "create Account" : "Sign in"}
+
+                </span>
               <a>(클릭 시 회원가입, 로그인으로 바뀜)</a>
               <form onSubmit={onSubmit}>
                 <input
