@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { authService, auth } from '../fbase'; 
 
 const Mypage = () => {
 
@@ -51,11 +49,9 @@ const Mypage = () => {
                     width:"60%",
                     height:"100vh",
                     padding:"1.5rem",
-                    backgroundColor:"black"
                 }}
             >
-                <img>
-                </img>
+             <img ClassName="mypageImg" alt="mypage" src="img/test.png"/>
             </div>
             {/* 커뮤니티 이동 ui */}
             <div
@@ -63,10 +59,9 @@ const Mypage = () => {
                     width:"20%",
                     height:"100vh",
                     padding:"1.5rem",
-                    backgroundColor:"pink"
                 }}
             >
-                <img></img>
+             <img ClassName="comunityImg" alt="community" src="img/community.png"/>
             </div>
         </div>
     );

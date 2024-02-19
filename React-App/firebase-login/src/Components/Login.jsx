@@ -116,6 +116,7 @@ function Login() {
                     backgroundColor:"lightgrey",
                     marginBottom:"25px"
                   }}
+                  name="password"
                   type="password"
                   placeholder="Password"
                   required
