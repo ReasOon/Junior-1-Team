@@ -15,7 +15,8 @@ const firebaseConfig = {
   storageBucket: "project-115b0.appspot.com",
   messagingSenderId: "324607562576",
   appId: "1:324607562576:web:457612fc4c172724ef5255",
-  measurementId: "G-S280BPFNRX"
+  measurementId: "G-S280BPFNRX",
+  databaseURL:'https://project-115b0-default-rtdb.asia-southeast1.firebasedatabase.app/'
 };
 
 // Initialize Firebase

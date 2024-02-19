@@ -20,7 +20,7 @@
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from "./Components/Login";
-import mypage from "./Components/Mypage";
+// import mypage from "./Components/Mypage";
 
 export default function App() {
   return (
@@ -28,7 +28,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path={"/Login"} element={<Login />}></Route>
-          <Route path={"/user/mypage"} element={<mypage />}></Route>
+          {/* <Route path={"/user/mypage"} element={<mypage />}></Route> */}
         </Routes>
       </BrowserRouter>
     </div>
