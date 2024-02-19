@@ -61,7 +61,7 @@ const Mypage = () => {
                     padding:"1.5rem",
                 }}
             >
-             <img ClassName="comunityImg" alt="community" src="img/community.png"/>
+             <img ClassName="comunityImg" alt="community" src="img/comunity.png" />
             </div>
         </div>
     );

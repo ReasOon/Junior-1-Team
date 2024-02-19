@@ -22,10 +22,9 @@ function Page_for_community() {
       <button onClick={()=>onClick("green")}>Green</button>
       <button onClick={()=>onClick("black")}>Black</button>
       </div>
-
+      <img ClassName="comunityImg" alt="community" src="img/comunity.png"></img>
       <div className='list-div'>
           <div className='list-sec' style={{backgroundColor:backcolor}}></div>
-
           <div className='profile-icon'></div>
       </div>
 

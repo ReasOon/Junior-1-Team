@@ -10,7 +10,7 @@ import Mypage from './Components/Mypage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-     <Mypage />
+     <Page_for_community />
   </React.StrictMode>
   );
 
