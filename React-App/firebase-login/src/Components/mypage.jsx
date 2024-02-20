@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Mypage = () => {
 
@@ -9,6 +10,7 @@ const Mypage = () => {
     })
 
     const { input1, input2, input3 } = input; // destructuring
+    const navigate = useNavigate();
 
     const onChangeInput = (e) => {
         const {name, value} = e.target // destructuring
@@ -18,9 +20,23 @@ const Mypage = () => {
         })
     }
 
+    const goToCommunity = () => {
+        navigate("/Community");
+        window.location.replace('/Community');
+    }
+
+    const goToInformation = () => {
+        navigate("/Information");
+        window.location.replace("/Information");
+    }
+
+    const Logout = () => {
+        navigate(-1);
+    }
+  
+
     return (
         <div style = {{ display:"flex", width:"100%" }}>
-            {/* 개인정보 및 로그아웃 */}
             <div
                 style = {{
                     width:"20%",
@@ -42,8 +58,12 @@ const Mypage = () => {
                   담배 {input2}개 <br />
                   {input3}원
              </div>
+             <br  />
+             <button onClick={goToInformation}>
+                Information about No-Smoking
+             </button>
+             <button onClick={Logout}>Log out</button>
             </div>
-            {/* 진행도  */}
             <div
                 style = {{
                     width:"60%",
@@ -51,7 +71,13 @@ const Mypage = () => {
                     padding:"1.5rem",
                 }}
             >
-             <img ClassName="mypageImg" alt="mypage" src="img/test.png"/>
+             <img
+                style = {{
+                    width:"120vh",
+                    height:"100%"
+                }}
+              ClassName="progressImg" alt="progress" src="img/progress.png"
+             />
             </div>
             {/* 커뮤니티 이동 ui */}
             <div
@@ -61,7 +87,9 @@ const Mypage = () => {
                     padding:"1.5rem",
                 }}
             >
-             <img ClassName="comunityImg" alt="community" src="img/comunity.png" />
+             <img ClassName="comunityImg" alt="community" src="img/comunity.png" 
+                onClick={goToCommunity}
+             />
             </div>
         </div>
     );

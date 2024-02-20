@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { authService, auth } from '../fbase';
+import { useNavigate } from "react-router-dom";
 import { ref, set } from 'firebase/database';
 
 function Login() {
@@ -9,7 +10,8 @@ function Login() {
     const [newAccount, setNewAccount] = useState(true);
     const [error, setError] = useState('');
     const [userData, setUserData] = useState(null);
-    
+    const navigate = useNavigate();
+
     const handleOpenPopup = () => {
       alert("로그인 후 사용해주세요!");
     }
@@ -32,12 +34,19 @@ function Login() {
         }
     }
 
+    const goToMypage = () => {
+      navigate("/Mypage");
+      window.location.replace('/Mypage');
+  }
+
+
     function handleGoogleLogin() {
         const provider = new GoogleAuthProvider(); // provider를 구글로 설정
         signInWithPopup(auth, provider) // popup을 이용한 signup
           .then((data) => {
             setUserData(data.user); // user data 설정
             console.log(data) // console로 들어온 데이터 표시
+            goToMypage();
           })
           .catch((err) => {
             console.log(err);
@@ -137,7 +146,8 @@ function Login() {
                   }}
                   type="submit"
                   value={newAccount ? "create Account" : "Sign in"}
-                />
+                  onClick={newAccount ? null : goToMypage}
+               />
               </form>
               <h4
                 style = {{

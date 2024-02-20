@@ -1,48 +1,20 @@
-// import logo from './logo.svg';
-// import './App.css';
-// import react from 'react';
-// import { Router, Route } from 'react-router-dom';
-// import Login from './Components/Login';
-// import mypage from './Components/mypage';
-
-// function App() {
-//   return (
-//     <>
-//     <Router>
-//      <Route exact path="/" component={Login}/>
-//      <Route path="/mypage" component={mypage}/>
-//     </Router>
-//     </>
-//   );
-// }
-
-// export default App;
-
-import Imformation from './Components/Imformation';
-import {dummy} from './imformationDummy';
-import { BrowserRouter, Link } from 'react-router-dom';
+import Login from './Components/Login';
+import Mypage from './Components/Mypage';
+import Community from './Components/Community';
+import Information from './Components/Information';
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 function App() {
   
   return (
-    
-    <div className="app-container">
-      {
-        dummy.results.map((item) => {
-          return(
-            <BrowserRouter>
-              <Imformation
-                title={item.title}
-                imformation_path={item.imformation_path}
-                content={item.content}
-                link_url={item.link_url}
-              />
-            </BrowserRouter>
-          )
-        })
-      }
-      
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Mypage" element={<Mypage />} />
+        <Route path="/Community" element={<Community />} />
+        <Route path="/Information" element={<Information />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
