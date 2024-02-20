@@ -91,8 +91,8 @@ export default function Information({ title, information_path, content, link_url
             </div>
             <div //clsssName="information-container" 
                 style={{
-                    width: "150px",
-                    margin: "10px",
+                    width: "250px",
+                    margin: "20px",
                     backgroundColor: "skyblue",
                     color: "white",
                     borderRadius: "5px",
@@ -101,12 +101,13 @@ export default function Information({ title, information_path, content, link_url
                 onClick={() => { window.open(link_url) }}
             >
                 <img
-                    style={{
-                        width: "30px",
-                        height: "50px"
-                    }}
+                    // style={{
+                    //     maxWidth:"100%",
+                    //     width: "300px",
+                    //     padding:"20px"
+                    // }}
                     src={information_path}
-                    alt="정보사진"
+                    alt="InformationImg" width="200px" height="300px"
                 />
                 <div //className="information-info"
                     style={{

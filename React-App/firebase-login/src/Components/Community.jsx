@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Page_for_community() {
+function Community() {
   const [backcolor, setBackcolor] = useState("");
   const [imageSrc, setImageSrc] = useState(null);
   const navigate = useNavigate();
@@ -54,7 +54,7 @@ function Page_for_community() {
             display: "flex"
           }}
         >
-          {/* <div className='list-sec' 
+          <div className='list-sec' 
            style = {{
              backgroundColor:"backcolor",
              height:"100%",
@@ -62,7 +62,7 @@ function Page_for_community() {
             }}
           >
            {imageSrc && <img src={imageSrc} alt="Selected Color" />}
-          </div> */}
+          </div>
 
           <div>
             <img
@@ -80,4 +80,4 @@ function Page_for_community() {
   );
 }
 
-export default Page_for_community;
+export default Community;
