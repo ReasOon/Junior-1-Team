@@ -18,19 +18,32 @@
 
 // export default App;
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from "./Components/Login";
-// import mypage from "./Components/Mypage";
+import Imformation from './Components/Imformation';
+import {dummy} from './imformationDummy';
+import { BrowserRouter, Link } from 'react-router-dom';
 
-export default function App() {
+function App() {
+  
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path={"/Login"} element={<Login />}></Route>
-          {/* <Route path={"/user/mypage"} element={<mypage />}></Route> */}
-        </Routes>
-      </BrowserRouter>
+    
+    <div className="app-container">
+      {
+        dummy.results.map((item) => {
+          return(
+            <BrowserRouter>
+              <Imformation
+                title={item.title}
+                imformation_path={item.imformation_path}
+                content={item.content}
+                link_url={item.link_url}
+              />
+            </BrowserRouter>
+          )
+        })
+      }
+      
     </div>
   );
 }
+
+export default App;

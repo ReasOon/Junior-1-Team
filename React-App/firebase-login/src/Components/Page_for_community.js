@@ -3,9 +3,11 @@ import { useState } from 'react';
 
 function Page_for_community() {
   const [backcolor,setBackcolor]=useState("");
-  
-  const onClick =(color)=>{
- setBackcolor(color)
+  const [imageSrc, setImageSrc] = useState(null);
+
+  const onClick =(color, imageURL)=>{
+  setBackcolor(color)
+  setImageSrc(imageURL);
 }
  
   return (
@@ -13,7 +15,7 @@ function Page_for_community() {
       <div>
         Page for Community
       </div>
-      
+
       <div className='list'>
 
       <div className='list-first'>
@@ -22,9 +24,14 @@ function Page_for_community() {
       <button onClick={()=>onClick("green")}>Green</button>
       <button onClick={()=>onClick("black")}>Black</button>
       </div>
-      <img ClassName="comunityImg" alt="community" src="img/comunity.png"></img>
+      <div>
+       <img ClassName="comunityImg" alt="community" src="img/comunity.png" />
+      </div>
       <div className='list-div'>
-          <div className='list-sec' style={{backgroundColor:backcolor}}></div>
+          <div className='list-sec' style={{backgroundColor:backcolor}}>
+          {imageSrc && <img src={imageSrc} alt="Selected Color" />}
+          </div>
+
           <div className='profile-icon'></div>
       </div>
 

@@ -29,7 +29,7 @@ const Mypage = () => {
                 }}
             >
              <h3>
-                이름 님
+                사용자님
              </ h3>
              <input type="text" name="input1" placeholder="하루 흡연 횟수" value={input1} onChange={onChangeInput} />
              <input type="text" name="input2" placeholder="담배 갯수(한 팩 기준)" value={input2} onChange={onChangeInput} />
