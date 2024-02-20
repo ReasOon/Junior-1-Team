@@ -186,7 +186,12 @@ function Login() {
               }}
               onClick={handleOpenPopup}
           >
-            <img ClassName="comunityImg" alt="Login" src="img/Login.png"/>
+            <img
+             style = {{
+              width:"600px",
+              height:"200%"
+             }} 
+             ClassName="comunityImg" alt="Login" src="img/Login.png"/>
             </ div>
           </div>
         </div>

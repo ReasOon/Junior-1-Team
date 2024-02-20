@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Information({ title, imformation_path, content, link_url }) {
+export default function Information({ title, information_path, content, link_url }) {
 
     const dummy = {
         results: [
@@ -66,7 +66,6 @@ export default function Information({ title, imformation_path, content, link_url
     return (
         <div
             style={{
-                width: "100%",
                 backgroundColor: "slategray"
             }}
         >
@@ -103,11 +102,10 @@ export default function Information({ title, imformation_path, content, link_url
             >
                 <img
                     style={{
-                        Width: "100px",
-                        padding: "10px",
-                        width: "200px"
+                        width: "30px",
+                        height: "50px"
                     }}
-                    src={imformation_path}
+                    src={information_path}
                     alt="정보사진"
                 />
                 <div //className="information-info"
