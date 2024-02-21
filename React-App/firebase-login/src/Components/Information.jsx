@@ -80,8 +80,14 @@ export default function Information({ title, information_path, content, link_url
                     dummy.results.map((item) => {
                         return (
                             <div key={item.title}>
-                                <h2>{item.title}</h2>
-                                <img src={item.information_path} alt={item.title} />
+                                <h4>{item.title}</h4>
+                                <img 
+                                    src={item.information_path} 
+                                    alt={item.title}
+                                    max-width="100%"
+                                    width="300px"
+                                    padding="20px"
+                                />
                                 <p>{item.content}</p>
                                 <a href={item.link_url}>더 많은 정보 보기</a>
                             </div>
@@ -101,13 +107,8 @@ export default function Information({ title, information_path, content, link_url
                 onClick={() => { window.open(link_url) }}
             >
                 <img
-                    // style={{
-                    //     maxWidth:"100%",
-                    //     width: "300px",
-                    //     padding:"20px"
-                    // }}
                     src={information_path}
-                    alt="InformationImg" width="200px" height="300px"
+                    alt="InformationImg" 
                 />
                 <div //className="information-info"
                     style={{

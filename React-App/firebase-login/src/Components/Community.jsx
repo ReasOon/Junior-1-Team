@@ -12,15 +12,14 @@ function Community() {
   }
 
   const goToMypage = () => {
-    navigate("/Mypage");
-    window.location.replace('/Mypage');
+    navigate(-1);
   }
 
   return (
     <div>
       <div
         style={{
-          display: " flex",
+          display: "flex",
           border: "1px solid black",
           borderRadius: "10px",
           height: "100vh"

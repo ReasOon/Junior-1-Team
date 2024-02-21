@@ -191,7 +191,7 @@ function Login() {
               width:"600px",
               height:"200%"
              }} 
-             ClassName="comunityImg" alt="Login" src="img/Login.png"/>
+             ClassName="LoginImg" alt="Login" src="img/Login.png"/>
             </ div>
           </div>
         </div>
